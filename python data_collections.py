@@ -50,3 +50,33 @@ print(f"katrs otrais elements: {my_list[::2]}")
 
 #=====B daļa vārdnīca===== 
 
+print("\n--- Vārdnīcas ---")  # Izvada teksta rindu ar jaunu līniju (\n)
+
+# Definējam vārdnīcu ar studentu atzīmēm
+studenti = {
+    "Anna": 85,
+    "Jānis": 72,
+    "Līga": 95
+} 
+
+
+studenti["Mārtiņš"] = 88  # Pievienojam jaunu studentu
+
+
+studenti["Jānis"] = 78  # Mainām esošā studenta Jāņa atzīmi
+
+# ---- Izvada visus studentus ar viņu atzīmēm ----
+for name, grade in studenti.items():  # .items() dod gan atslēgu (name), gan vērtību (grade)
+    print(f"{name}: {grade}")  # F-string ļauj ērti ievietot mainīgos tekstā
+
+# ---- Atrodam labāko studentu ----
+labākais_vārds = ""      # Šeit glabāsim labākā studenta vārdu
+augstākā_atzīme = 0      # Šeit glabāsim lielāko atzīmi
+
+for name, grade in studenti.items():  # Pārskatām katru studentu vārdnīcā
+    if grade > augstākā_atzīme:      # Ja šī atzīme ir lielāka nekā iepriekšējā lielākā
+        augstākā_atzīme = grade     # Atjaunojam lielāko atzīmi
+        labākais_vārds = name       # Saglabājam labākā studenta vārdu
+
+
+print(f"Labākais students: {labākais_vārds} ({augstākā_atzīme})") # Izvada labākā studenta vārdu un atzīmi
