@@ -79,4 +79,24 @@ for name, grade in studenti.items():  # Pārskatām katru studentu vārdnīcā
         labākais_vārds = name       # Saglabājam labākā studenta vārdu
 
 
-print(f"Labākais students: {labākais_vārds} ({augstākā_atzīme})") # Izvada labākā studenta vārdu un atzīmi
+print(f"Labākais students: {labākais_vārds} ({augstākā_atzīme})") # Izvada labākā studenta vārdu un atzīmi 
+
+#=====C daļa saraksts ar vārdnīcām=====
+
+print("\n--- Studenti ar atzīmi >= 80 ---")
+
+studentu_saraksts = [
+    {"name": "Anna", "grade": 85},
+    {"name": "Jānis", "grade": 78},
+    {"name": "Līga", "grade": 95},
+    {"name": "Mārtiņš", "grade": 88}
+]                                       # Šeit mums ir SARAKSTS,# kur katrs elements ir VĀRDNĪCA
+
+labie_studenti = []  # šeit liksim studentus ar atzīmi >= 80
+
+for students in studentu_saraksts:
+    if students["grade"] >= 80:
+        labie_studenti.append(students)
+
+for index, students in enumerate(labie_studenti, start=1):
+    print(f"{index}. {students['name']} — {students['grade']}") # enumerate() pievieno numerāciju (1., 2., 3., ...)
