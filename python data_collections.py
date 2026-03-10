@@ -3,7 +3,7 @@
 print("-----saraksti----- ")
 my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
 my_list.append(11) #pievieno elementu saraksta beigās 
-my_list.insert(0, 0) #pievieno elementu saraksta sākumā (divi argumenti: pozīcija, vērtība)
+my_list.insert(0, 0) #pievieno elementu saraksta sākumā (divi argumenti: pozīcija, vērtība) 
 print(my_list) 
 
 my_list.pop() #noņem pēdējo elementu (var atgriezt izdzēsto) dzēš pēc pozīcijas indeksa !!!skaitīšana sākas no 0!!!
